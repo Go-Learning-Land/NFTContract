@@ -46,8 +46,8 @@ contract GoLearningLand is ERC721A, Ownable {
   }
 
   function mint() external {
-    require(started, "The pilgrimage to this land has not yet started");
-    require(totalSupply() < MAX_SUPPLY, "All lost souls have been accounted for");
+    require(started, "GLL mint is not available yet");
+    require(totalSupply() < MAX_SUPPLY, "All Gophers has been taken");
     // mint
     _safeMint(msg.sender, 1);
   }
