@@ -4,6 +4,7 @@ Solidity Ethereum Contract for GLL
 
 ![img](./gllcontract.png)
 
+[Read metric reports](./solidity-metrics.html)
 
  Sūrya's Description Report
 
