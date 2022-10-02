@@ -21,10 +21,10 @@ import "erc721a/contracts/ERC721A.sol";
 
 contract GoLearningLand is ERC721A, Ownable {
   // "Private" Variables
-  address private constant GOPHER1 = 0xGOPHER1;
-  address private constant GOPHER2 = 0xGOPHER2;
-  address private constant GOPHER3 = 0xGOPHER3;
-  address private constant GOPHER4 = 0xGOPHER4;
+  address private constant GOPHER1 = 0xf1281D9969b7Cf41063898c8e3BA3eF34589fEaa;
+  address private constant GOPHER2 = 0xf1281D9969b7Cf41063898c8e3BA3eF34589fEaa;
+  address private constant GOPHER3 = 0xf1281D9969b7Cf41063898c8e3BA3eF34589fEaa;
+  address private constant GOPHER4 = 0xf1281D9969b7Cf41063898c8e3BA3eF34589fEaa;
   string private baseURI= "https://address.execute-api.eu-west-1.amazonaws.com/prod/metadata/";
 
   // Public Variables
