@@ -24,6 +24,7 @@ contract GoLearningLand is ERC721A, Ownable {
   address private constant GOPHER1 = 0xGOPHER1;
   address private constant GOPHER2 = 0xGOPHER2;
   address private constant GOPHER3 = 0xGOPHER3;
+  address private constant GOPHER4 = 0xGOPHER4;
   string private baseURI= "https://address.execute-api.eu-west-1.amazonaws.com/prod/metadata/";
 
   // Public Variables
@@ -57,6 +58,7 @@ contract GoLearningLand is ERC721A, Ownable {
     _safeMint(GOPHER1, TEAM_CLAIM_AMOUNT);
     _safeMint(GOPHER2, TEAM_CLAIM_AMOUNT);
     _safeMint(GOPHER3, TEAM_CLAIM_AMOUNT);
+    _safeMint(GOPHER4, TEAM_CLAIM_AMOUNT);
     claimed = true;
   }
 
