@@ -22,11 +22,12 @@ import "@openzeppelin/contracts/utils/Strings.sol";
 
 contract GoLearningLand is ERC721A, Ownable {
   using Strings for uint256;
+  
   // "Private" Variables
-  address private constant GOPHER1 = 0xf1281D9969b7Cf41063898c8e3BA3eF34589fEaa;
-  address private constant GOPHER2 = 0xf1281D9969b7Cf41063898c8e3BA3eF34589fEaa;
-  address private constant GOPHER3 = 0xf1281D9969b7Cf41063898c8e3BA3eF34589fEaa;
-  address private constant GOPHER4 = 0xf1281D9969b7Cf41063898c8e3BA3eF34589fEaa;
+  address private constant GOPHER1 = 0xf1281D9969b7Cf41063898c8e3BA3eF34589fEaa; //github.com/ErdemOzgen
+  address private constant GOPHER2 = 0xf1281D9969b7Cf41063898c8e3BA3eF34589fEaa; //github.com/burakakyol
+  address private constant GOPHER3 = 0xf1281D9969b7Cf41063898c8e3BA3eF34589fEaa; //github.com/okatilla
+  address private constant GOPHER4 = 0xf1281D9969b7Cf41063898c8e3BA3eF34589fEaa; //github.com/duruer
   string private baseURI= "ipfs://bafybeiaqeikk443l45rc4zuwlra5oawddgr6y6oqkbs6xx7zop2o5yskpe/";
   string private uriSuffix = ".json"; 
 
@@ -34,7 +35,6 @@ contract GoLearningLand is ERC721A, Ownable {
   bool public started = true;
   bool public claimed = false;
   uint256 public constant MAX_SUPPLY = 3333;
-  //uint256 public constant MAX_MINT = 1;
   uint256 public constant TEAM_CLAIM_AMOUNT = 111;
 
   
@@ -43,7 +43,7 @@ contract GoLearningLand is ERC721A, Ownable {
       
   }
 
-  // Start tokenid at 1 instead of 0
+
   function _startTokenId() internal view virtual override returns (uint256) {
       return 1;
   }
@@ -51,13 +51,12 @@ contract GoLearningLand is ERC721A, Ownable {
   function mint() external {
     require(started, "GLL mint is not available yet");
     require(totalSupply() < MAX_SUPPLY, "All Gophers has been minted");
-    // mint
     _safeMint(msg.sender, 1);
   }
 
   function teamClaim() external onlyOwner {
     require(!claimed, "Team already claimed");
-    // claim
+    // claim for team
     _safeMint(GOPHER1, TEAM_CLAIM_AMOUNT);
     _safeMint(GOPHER2, TEAM_CLAIM_AMOUNT);
     _safeMint(GOPHER3, TEAM_CLAIM_AMOUNT);
