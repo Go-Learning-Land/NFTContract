@@ -14,7 +14,7 @@
 
 // SPDX-License-Identifier: MIT
 
-pragma solidity 0.8.7;
+pragma solidity ^0.8.7;
 //
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "erc721a/contracts/ERC721A.sol";
@@ -24,11 +24,11 @@ contract GoLearningLand is ERC721A, Ownable {
   using Strings for uint256;
   // "Private" Variables
   address private constant GOPHER1 = 0xf1281D9969b7Cf41063898c8e3BA3eF34589fEaa;
-  address private constant GOPHER2 = 0x8bBc7D4a0290BA41Ba1779F6177120ee9Ea1d3a1;
+  address private constant GOPHER2 = 0xf1281D9969b7Cf41063898c8e3BA3eF34589fEaa;
   address private constant GOPHER3 = 0xf1281D9969b7Cf41063898c8e3BA3eF34589fEaa;
   address private constant GOPHER4 = 0xf1281D9969b7Cf41063898c8e3BA3eF34589fEaa;
-  string private baseURI= "https://address.execute-api.eu-west-1.amazonaws.com/prod/metadata/";
-  string private uriSuffix = ".json"; // can be .json also change test files
+  string private baseURI= "ipfs://bafybeiaqeikk443l45rc4zuwlra5oawddgr6y6oqkbs6xx7zop2o5yskpe/";
+  string private uriSuffix = ".json"; 
 
   // Public Variables
   bool public started = true;
