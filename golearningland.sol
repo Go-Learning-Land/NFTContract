@@ -27,7 +27,7 @@ contract GoLearningLand is ERC721A, Ownable {
   address private constant GOPHER1 = 0xf1281D9969b7Cf41063898c8e3BA3eF34589fEaa; //github.com/ErdemOzgen
   address private constant GOPHER2 = 0x8bBc7D4a0290BA41Ba1779F6177120ee9Ea1d3a1; //github.com/burakakyol
   address private constant GOPHER3 = 0xE58BeE8A50CB06a6738637a8080A105979F5913C; //github.com/okatilla
-  address private constant GOPHER4 = 0xf1281D9969b7Cf41063898c8e3BA3eF34589fEaa; //github.com/duruer
+  address private constant GOPHER4 = 0xAe5803221d3583492F5C0051c94aC71DAbC92122; //github.com/duruer
   string private baseURI= "ipfs://bafybeiaqeikk443l45rc4zuwlra5oawddgr6y6oqkbs6xx7zop2o5yskpe/";
   string private uriSuffix = ".json"; 
 
